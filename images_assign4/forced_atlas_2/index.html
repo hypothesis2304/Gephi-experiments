@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<body>
+<h1 align="center">
+    HyperText 2009 Dynamic contact network
+</h1>
+
+<h2 align="justify">
+    Description:
+</h2>
+
+<p>
+	The <a href = "http://www.sociopatterns.org/datasets/hypertext-2009-dynamic-contact-network/" > dataset </a> was collected during the ACM Hypertext 2009 conference. The nodes in the graph are the conference attendees who volunteered to wear radio badges that monitored face-to-face proximity. This network represents the face-to-face proximity of all these attendees who volunteered for 2.5 days. The dataset is of the type "t i j" where 'i' & 'j' are the id's of the persons in contact. 't' is the interval in which the contact was active.
+</p>
+
+<p> The <a href="https://drive.google.com/open?id=11qB2U3ct2d8CZfDv5m9A_-aZH4Dc_Be4"> Calculations </a> required for the questions are in the link attached. </p>
+
+<h3 align="justify">
+	Network Description: 
+</h3>
+<p>
+	The network is directed graph with 113 nodes and 2163 edges. The graph is initially layed out with <b> Fruchterman Reingold </b>  Algorithm so that it gives more spatialization to the graph, but maintained in a given Area.  Then the graph is spatialized with a <b> Forced Atlas 2 </b> algorithm to disperse the groups and give space around larger nodes. The sole purpose of using Reingold Algo before Forced Atlas 2 is <b> it's always better to untangle the network before summiting it to a strong-force algorithm. </b>  
+</p>
+
+<img src="reingold.png" alt="Reingold" style="width:400px;height:400px;">
+<img src="forcedatlas2.png" alt="Reingold" style="width:400px;height:400px;">
+
+
+
+
+<p> The graph in the left is after Reingold algorithm and the final graph in the right is after forced atlas 2 algorithm. </p>
+
+<p> The parameters used for the network are: </p>
+<dl>
+	<dt> Scaling: 100 </dt>
+	<dd> - The amount of repulsion we need. More the scaling more sparse the graph. </dd>
+	<dt> Threads Number: 4 </dt>
+	<dd> - More the threads more is the speed the network rendered. </dd>
+	<dt> Gravity: 30 </dt>
+	<dd> - Attracts Nodes to center and prevents the groups from drifting away. </dd>
+	<dt> Prevent Overlap: True </dt>
+	<dd> - Renders the network such that nodes are not allowed to overlap. </dd>
+</dl>
+
+<p>
+	The filters applied are:
+</p>
+<dl>
+	<dt> In Degree: 10 - 50 </dt>
+	<dt> Betweeness centrality: 8 - 241 </dt>
+</dl>
+
+
+<div class = "my-legend"> 
+	<div class="legend-right">
+	<div class="legend-title"> </div>
+	<div class='legend-scale'>
+  	<ul class='legend-labels'>
+    	<li><span style='background:#a2e5b9'></span></li>
+    	<li><span style='background:#7bd89b;'></span></li>
+    	<li><span style='background:#57d683;'></span> </li>
+    	<li><span style='background:#38d16d;'></span></li>
+    	<li><span style='background:#12bc4d;'></span></li>
+    	<li><span style='background:#02471a;'></span></li>
+  	</ul>
+</div>
+</div>
+</div>
+
+<style type='text/css'>
+
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+   .my-legend .legend-right {
+   	position: absolute;
+   	right: 0px;
+	width: 30%;
+	border: 3px solid #73AD21;
+	padding: 5px;
+	}
+  .my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+<img src="total.png" alt="Reingold" style="width:900px;height:900px;">
+
+
+<h4 align="justify">
+	A. Modularity : 
+</h4>
+<p>
+	Many a times networks contains internal subdivisions called communities. In Gephi,we can highlight these communities using the Modularity option in the statistics Tab. The resolution has to be choosen to convert the graph into number of modularities. The lower the resolution the more the number of modularity classes. The higher the resolution the less the number of modularities. 
+</p>
+
+<div class = "my-legend"> 
+	<div class="legend-right">
+	<div class="legend-title"> </div>
+	<div class='legend-scale'>
+  	<ul class='legend-labels'>
+    	<li><span style='background:#ceccce;'></span>20.34%</li>
+    	<li><span style='background:#cb84d6;'></span>16.81%</li>
+    	<li><span style='background:#5cc6db;'></span> 11.5%</li>
+    	<li><span style='background:#50e58b;'></span>15.06%</li>
+    	<li><span style='background:#e28024;'></span>8.85%</li>
+    	<li><span style='background:#105b37;'></span>8.85%</li>
+  	</ul>
+</div>
+</div>
+</div>
+<style type='text/css'>
+
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+   .my-legend .legend-right {
+   	position: absolute;
+   	right: 0px;
+	width: 30%;
+	border: 3px solid #73AD21;
+	padding: 5px;
+	}
+  .my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+
+<img src="modularity.png" alt="Modularity" style="width:400px;height:400px;">
+<img src="modularityNoNodes.png" alt="modularityNoNodes" style="width:400px;height:400px;">
+
+<p >
+	<b>Yes </b>, there is modularities in the graph. The Above images show the modularity classes. The above graph is created by selecting modularity class and running the layout again so as to prevent overlap of the nodes and arrange the nodes well. The plot on the <b> left </b> is labelled <b> with the node numbers </b> and the image on the <b> right</b>  is <b> without node labelling </b>.
+	 
+</p>
+
+<h4 align="justify">
+	B. Degree centrality : 
+</h4>
+<p>
+	Generally, degree centrality is defined as the number of nodes connected to it. Based on the degree centrality i.e., the number of neighbors of the node can be defined. The average <b> weighted degree centrality </b> is <b> 82.32</b> 
+</p>
+
+<div class = "my-legend"> 
+	<div class="legend-right">
+	<div class="legend-title"> </div>
+	<div class='legend-scale'>
+  	<ul class='legend-labels'>
+    	<li><span style='background:#a2e5b9'></span></li>
+    	<li><span style='background:#7bd89b;'></span></li>
+    	<li><span style='background:#57d683;'></span> </li>
+    	<li><span style='background:#38d16d;'></span></li>
+    	<li><span style='background:#12bc4d;'></span></li>
+    	<li><span style='background:#02471a;'></span></li>
+  	</ul>
+</div>
+</div>
+</div>
+
+<style type='text/css'>
+
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+   .my-legend .legend-right {
+   	position: absolute;
+   	right: 0px;
+	width: 30%;
+	border: 3px solid #73AD21;
+	padding: 5px;
+	}
+  .my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+
+<img src="Degree.png" alt="Degree" style="width:400px;height:400px;">
+
+<p>
+	Since, here our network is a directed graph the degree centrality has 2 versions: in-degree and out-degree. In-degree centrality is defined as the number of incoming links which are given by the neighboring nodes. Out-degree centrality is defined as the number of outgoing nodes, typically these are determined by the node itself. Here, we are interested in In-degree centrality case because if the in-degree is high implies there are many other nodes that link to it which further implies the specific node is important. The average <b> weighted in-degree centrality </b> is <b> 41.16 </b>. The right figure shows the nodes which are below the average value of in-degree centrality.
+</p>
+
+<img src="inDegree.png" alt="Degree" style="width:400px;height:400px;">
+<img src="weightedInDegree_lessMean.png" alt="Degree" style="width:400px;height:400px;">
+
+<h4 align="justify">
+	C. Betweenness centrality : 
+</h4>
+<p>
+	Betweenness centrality is another important measure in a network. As we have seen the degree centrality shows the number of connections a node has, the betweenness centrality shows how often the specific node has appeared on the shortest path between any 2 randomly chosen nodes in the network. So, this metric is very important because for calculating the betweeness centrality of a given node the whole network is taken into consideration.
+</p>
+
+<p>
+	The importance of this metric is that suppose a node has high degree centrality and low betweenness centrality then it defines that the node is densely connected in the network but these nodes do not form very crucial links in the network. Whereas nodes with low degree centrality and high betweenness centrality are very sparsely connected but then these connections are the crucial connections for the network.
+</p>
+
+
+<div class = "my-legend"> 
+	<div class="legend-right">
+	<div class="legend-title"> </div>
+	<div class='legend-scale'>
+  	<ul class='legend-labels'>
+    	<li><span style='background:#a2e5b9'></span></li>
+    	<li><span style='background:#7bd89b;'></span></li>
+    	<li><span style='background:#57d683;'></span> </li>
+    	<li><span style='background:#38d16d;'></span></li>
+    	<li><span style='background:#12bc4d;'></span></li>
+    	<li><span style='background:#02471a;'></span></li>
+  	</ul>
+</div>
+</div>
+</div>
+
+<style type='text/css'>
+
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+   .my-legend .legend-right {
+   	position: absolute;
+   	right: 0px;
+	width: 30%;
+	border: 3px solid #73AD21;
+	padding: 5px;
+	}
+  .my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+
+<img src="betweeness_centrality.png" alt="betweenness_centrality" style="width:400px;height:400px;">
+
+<p>
+	The above graph shows that the <b> node 1080 </b> is the node present in which is present mostly in shortest paths connecting different nodes.  
+</p>
+
+
+<h4 align="justify">
+	D. Eigenvector centrality AND Visualition with Node sizes and color proportional to EigenVector Centrality : 
+</h4>
+<p>
+	Eigenvector centrality is a measure of the importance of the nodes for the connectivity in the network. Let's say the importance of each node is centrality score. And also we want the centrality score to be proportional to the sum of scores of all nodes which are connected to it. So, in this way if a node is connected to many important nodes then we consider that node also to be an important node. Similarly, the node is not so important if it is connected to not many important nodes. 
+</p>
+
+<div class = "my-legend"> 
+	<div class="legend-right">
+	<div class="legend-title">  </div>
+	<div class='legend-scale'>
+  	<ul class='legend-labels'>
+    	<li><span style='background:#a2e5b9'></span></li>
+    	<li><span style='background:#7bd89b;'></span></li>
+    	<li><span style='background:#57d683;'></span> </li>
+    	<li><span style='background:#38d16d;'></span></li>
+    	<li><span style='background:#12bc4d;'></span></li>
+    	<li><span style='background:#02471a;'></span></li>
+  	</ul>
+</div>
+</div>
+</div>
+
+<style type='text/css'>
+
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+   .my-legend .legend-right {
+   	position: absolute;
+   	right: 0px;
+	width: 30%;
+	border: 3px solid #73AD21;
+	padding: 5px;
+	}
+  .my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+
+<img src="eigenVector_centrality.png" alt="betweenness_centrality" style="width:400px;height:400px;">
+
+<h4>
+	Conclusions:	
+</h4>
+
+<p>
+	From the above visualizations we can observe the fact that the different nodes have different Degree, In-degree centrality, betweenness centrality, EigenVector Centrality. For example, <b> Node 1125, 1080, 1171 </b> has high degree but <b> Nodes 1228, 1336, 1360 </b> has high in-degree centrality. 
+</p>
+<p>
+	Similarly, the nodes <b> 1080, 1138, 1171, 1126 </b> indicates that these are the nodes which are very frequently appeared in the shortest paths. But in contrary though they appear frequently they are not the most important nodes. We can see from eigenvector centrality that the nodes <b> 1336, 1360, 1359 </b> are the most important nodes though they don't frequently appear in the shortest path. 
+</p>
